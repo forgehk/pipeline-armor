@@ -1,0 +1,17 @@
+# pipeline-armor policy
+version: 1
+
+# Fail at this severity or above.
+fail_at: medium
+
+scanners:
+  secrets:
+    enabled: true
+  patterns:
+    enabled: true
+  deps:
+    enabled: true
+
+# Allowlist findings you've reviewed and accepted.
+# Each entry should include a `reason` so the next person knows why it's allowed.
+allowlist: []
